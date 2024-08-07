@@ -8,7 +8,9 @@ export default function Page() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("/api/hello");
+        const response = await fetch(
+          "https://my-app-1-tau.vercel.app/api/hello"
+        );
         if (response.ok) {
           const result = await response.json();
           setData(result);
