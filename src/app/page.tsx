@@ -8,9 +8,7 @@ export default function Page() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(
-          "https://my-app-1-tau.vercel.app/api/hello"
-        );
+        const response = await fetch("/api/hello");
         if (response.ok) {
           const result = await response.json();
           setData(result);
@@ -27,7 +25,7 @@ export default function Page() {
 
   return (
     <div>
-      <h1>Data fetch from API </h1>
+      <h1>Data from API </h1>
       {data ? <p>{data.message}</p> : <p>Loading...</p>}
     </div>
   );
