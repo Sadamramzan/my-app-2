@@ -25,7 +25,7 @@ export default function Page() {
 
   return (
     <div>
-      <h1>Data from API</h1>
+      <h1>Data fetch from API </h1>
       {data ? <p>{data.message}</p> : <p>Loading...</p>}
     </div>
   );
